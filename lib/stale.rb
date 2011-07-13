@@ -1,0 +1,3 @@
+module Stale
+  # Your code goes here...
+end
