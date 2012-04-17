@@ -11,6 +11,8 @@ module Stale
         parameter.send(Model::IDENTIFIER)
       elsif parameter.is_a?(Class)
         Stale.interface.key_for_model(parameter)
+      elsif parameter.is_a?(Array)
+        Stale.interface.key_for_model(*parameter)
       else
         parameter.to_param
       end

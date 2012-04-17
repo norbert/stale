@@ -31,6 +31,10 @@ class StaleParametersTest < ActiveSupport::TestCase
     assert_equal 'stale_test_model:', @configuration.key_for_parameter(StaleTestModel)
   end
 
+  test "converts array parameters to keys" do
+    assert_equal 'stale_test_model:2', @configuration.key_for_parameter([StaleTestModel, 2])
+  end
+
   test "converts string parameters to keys" do
     assert_equal 'test', @configuration.key_for_parameter('test')
   end
