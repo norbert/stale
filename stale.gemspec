@@ -1,21 +1,18 @@
-# -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
-require "stale/version"
-
 Gem::Specification.new do |s|
   s.name        = "stale"
-  s.version     = Stale::VERSION
+  s.version     = "0.0.1"
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.authors     = ["Norbert Crombach"]
+  s.email       = ["norbert.crombach@primetheory.org"]
+  s.homepage    = "http://github.com/norbert/stale"
+  s.summary     = %q{Experimental fragment caching layer.}
 
   s.rubyforge_project = "stale"
 
   s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.test_files    = s.files.grep(/^test\//)
   s.require_paths = ["lib"]
+
+  s.add_dependency 'rails', '~> 3.2'
+  s.add_development_dependency 'mocha'
 end

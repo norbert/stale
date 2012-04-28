@@ -1,4 +1,5 @@
-source "http://rubygems.org"
+source :rubygems
 
-# Specify your gem's dependencies in stale.gemspec
 gemspec
+
+gem 'dalli', :require => false
