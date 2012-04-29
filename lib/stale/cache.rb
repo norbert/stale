@@ -19,10 +19,8 @@ module Stale
     end
 
     def delete(*keys)
-      data.multi do
-        keys.each do |key|
-          data.delete(key_with_prefix(key))
-        end
+      keys.each do |key|
+        data.delete(key_with_prefix(key))
       end
     end
 
