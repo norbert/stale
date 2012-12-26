@@ -1,7 +1,7 @@
 require 'stale'
 
 require 'test/unit'
-require 'mocha/setup'
+require 'mocha'
 
 class StaleTestController
   include Stale::Controller

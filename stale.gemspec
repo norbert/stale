@@ -14,5 +14,5 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency 'rails', '~> 3.2'
-  s.add_development_dependency 'mocha'
+  s.add_development_dependency 'mocha', '0.12.1'
 end
